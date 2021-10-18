@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 :root {
@@ -19,6 +18,47 @@ a {
 a:hover {
     color: #ffd584;
     text-decoration: none;
+}
+
+/* GENERAL */
+
+.gradient-text {
+    background-color: #6491ce;
+    background-image: linear-gradient(45deg, #2152ff, #21d4fd);
+    font-weight: 700;
+    background-size: 100%;
+    background-size: 100%;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(310deg, #2152ff, #21d4fd);
+}
+
+.spin-element {
+    -webkit-animation: spin 180s linear infinite;
+    -moz-animation: spin 180s linear infinite;
+    animation: spin 180s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 /* Back to top button */
@@ -332,7 +372,9 @@ a:hover {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover > a {
+    color: #fff;
     background-color: var(--primary-color);
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 48%);
 }
 .navbar-mobile .dropdown > .dropdown-active {
     display: block;
@@ -422,7 +464,7 @@ a:hover {
 #hero .icon-box:hover {
     background: rgba(0, 0, 0, 0.3);
     border-color: var(--primary-color);
-    transform: translateY(-10px) scale(1.01);
+    transform: translateY(-5px) scale(1.02);
 }
 #hero .icon-box:hover i {
     background-color: #000;
@@ -484,10 +526,10 @@ section {
 }
 
 /* About =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-.about .content h3 {
-    font-weight: 700;
-    font-size: 28px;
+.about h3 {
+    font-size: 3rem;
 }
+
 .about .content ul {
     list-style: none;
     padding: 0;
@@ -506,6 +548,43 @@ section {
 .about .content p:last-child {
     margin-bottom: 0;
 }
+
+/* list */
+.about .bg-gradient-info {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 0.2rem;
+    box-shadow: 2px 2px 4px rgb(0 0 0 / 15%);
+}
+.about .bg-gradient-info > i {
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.about .hover-img {
+    position: absolute;
+    height: auto;
+    border-radius: 0.5rem;
+    user-select: none;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 30%);
+}
+.about .hover-img:nth-child(2) {
+    top: 2%;
+    left: 52%;
+    width: 35%;
+}
+.about .hover-img:nth-child(3) {
+    top: 44%;
+    left: 55%;
+    width: 43%;
+}
+.about .hover-img:nth-child(4) {
+    top: 19%;
+    left: 0;
+    width: 51%;
+}
+
 
 /* Footer -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 #footer {
