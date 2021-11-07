@@ -9,8 +9,9 @@
 :root {
     --primary-color: #229dff;
     --highlight: #d38b3e;
-    --gradien-text: linear-gradient(45deg, #2152ff, #21d4fd);
-    --gradien-bg: linear-gradient(310deg, #2152ff, #21d4fd);
+    --gradient-text: linear-gradient(45deg, #2152ff, #21d4fd);
+    --gradient-bg: linear-gradient(310deg, #2152ff, #21d4fd);
+    --gradient-hero: linear-gradient(45deg, #4c4683, #71baf5);
 }
 
 a {
@@ -27,7 +28,8 @@ a:hover {
 
 .gradient-text {
     background-color: #4184e5;
-    background-image: var(--gradien-text);
+    padding-bottom: 6px;
+    background-image: var(--gradient-text);
     font-weight: 700;
     background-size: 100%;
     background-size: 100%;
@@ -38,8 +40,20 @@ a:hover {
     -webkit-text-fill-color: transparent;
 }
 
+.heading-icon {
+    color: #fff;
+    background: linear-gradient(45deg, #95aad9, #2197fe);
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.9;
+    font-size: 1.7rem;
+}
+
 .bg-gradient-info {
-    background: var(--gradien-bg);
+    background: var(--gradient-bg);
 }
 
 .spin-element {
@@ -85,7 +99,7 @@ a:hover {
     line-height: 0;
 }
 .back-to-top:hover {
-    background: var(--gradien-bg);
+    background: var(--gradient-bg);
 }
 .back-to-top:hover i {
     color: #fff;
@@ -387,7 +401,7 @@ a:hover {
 /* Hero Section -=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 .hero-wrapper {
     clip-path: ellipse(118% 54% at 50% 45%);
-    background: linear-gradient(45deg, #4c4683, #71baf5);
+    background: var(--gradient-hero);
 }
 #hero {
     width: 100%;
@@ -585,17 +599,66 @@ section {
 /* nav tabs */
 
 /* Cards =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#cards {
+    background: url('../img/gray-lines.svg');
+}
+
+#cards h3 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
 #cards .card {
-    width: 360px;
+    width: 400px;
     transition: all 200ms ease-in;
 }
 #cards .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(10px);
+    z-index: 2;
     border: 1px solid rgb(34 154 254);
 }
 #cards .card-img-bottom {
-    margin: -35px 0 0 0;
+    margin: -48px 0 0 0;
 }
+
+#cards .card-body {
+    padding: .5rem 1rem 1rem 1rem;
+}
+#cards .badges span {
+    padding: 2px 6px 3px 6px;
+    font-size: .9rem;
+    margin-right: 4px;
+    border-radius: .2rem;
+    background-color: rgba(102, 170, 255, 0.15);
+}
+#cards .badges .featured-tag {
+    color: #fff;
+    background: var(--gradient-bg)
+}
+#cards .title {
+    color: #2f3438;
+}
+#cards .card-text {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+}
+#cards .time {
+    color: #7cabd1;
+    margin: 20px 0 0 0;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+#cards .card-footer {
+    border: none;
+    padding: 1.2rem 1rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 #cards .swiper-pagination {
     margin-top: 25px;
@@ -624,20 +687,25 @@ section {
 .portfolio #portfolio-flters li {
     cursor: pointer;
     display: inline-block;
-    padding: 8px 15px 10px 15px;
-    font-size: 14px;
+    padding: 8px 20px 10px 20px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1;
     text-transform: uppercase;
-    color: #444444;
+    color: #3784bf;
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
-    border-radius: 3px;
+    border-radius: .25rem;
 }
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
     color: #fff;
-    background: var(--primary-color);
+}
+.portfolio #portfolio-flters li:hover {
+    background: var(--gradient-hero);
+}
+.portfolio #portfolio-flters li.filter-active {
+    background: var(--gradient-bg);
 }
 .portfolio #portfolio-flters li:last-child {
     margin-right: 0;

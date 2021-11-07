@@ -1,10 +1,4 @@
-/**
- * Template Name: Gp - v4.6.0
- * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
-;(function () {
+(function () {
     "use strict"
 
     /**
@@ -199,16 +193,16 @@
                 spaceBetween: 40,
             },
             480: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 60,
             },
             640: {
-                slidesPerView: 4,
+                slidesPerView: 2,
                 spaceBetween: 80,
             },
             992: {
                 slidesPerView: 2,
-                spaceBetween: 120,
+                spaceBetween: 80,
             },
         },
     })
