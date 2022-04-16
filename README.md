@@ -51,7 +51,7 @@ I use [GitHub](https://github.com/jaiimeriios/themes) for versioning
 
 
 
-#### DIGITAL SOLUTIONS
+### DIGITAL SOLUTIONS
 
 Base template for a digital agency website
 
@@ -64,7 +64,7 @@ Base template for a digital agency website
 TBD
 
 
-#### EVENT
+### EVENT
 
 Event is free website template for events, conferences and webinars. It’s one page, responsive HTML template created with the Bootstrap framework.
 
@@ -80,7 +80,7 @@ Event comes with all the necessary and important sections required to create an 
 
 November 2018
 
-#### MERCED
+### MERCED
 
 Merced is a free Bootstrap startup website template that gives your project a boost. This template is designed if you are just about to launch a website but have not executed it yet, speed things up with an professional and elegant premium template but does not cost you a single penny. It is just a click away, and you can begin using it.
 
