@@ -150,3 +150,36 @@ window.addEventListener('scroll', function() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("progressBar").style.width = scrolled + "%";
 });
+
+// Countdown Timer
+function updateCountdown() {
+  // Set target date to April 1, 2026
+  const targetDate = new Date('April 1, 2026 00:00:00').getTime();
+  
+  // Update every second
+  const countdown = setInterval(function() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+    
+    // Calculate time units
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // Display results
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    
+    // If countdown is finished
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById('countdown').innerHTML = '<h3 style="color: #ffe523;">DONETS is here!</h3>';
+    }
+  }, 1000);
+}
+
+// Initialize countdown when page loads
+updateCountdown();
