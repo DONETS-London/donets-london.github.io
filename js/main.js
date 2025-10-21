@@ -154,7 +154,7 @@ window.addEventListener('scroll', function() {
 // Countdown Timer
 function updateCountdown() {
   // Set target date to April 1, 2026
-  const targetDate = new Date('April 1, 2026 00:00:00').getTime();
+  const targetDate = new Date('April 1, 2026 09:00:00').getTime();
   
   // Update every second
   const countdown = setInterval(function() {
