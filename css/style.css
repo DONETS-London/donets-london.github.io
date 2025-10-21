@@ -1818,20 +1818,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*--------------------------------------------------------------
 # Countdown Timer
 --------------------------------------------------------------*/
-.countdown-container {
-  text-align: center;
-  margin: 40px 0;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  border: 1px solid rgba(255, 229, 35, 0.3);
-}
-
-.countdown-container h3 {
-  color: #ffe523;
-  font-size: 24px;
-  margin-bottom: 30px;
-  font-weight: 600;
+.countdown-wrapper {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  z-index: 10;
 }
 
 .countdown-timer {
@@ -1848,12 +1840,13 @@ body.mobile-nav-active #mobile-nav-toggle {
   min-width: 120px;
   border: 2px solid rgba(255, 229, 35, 0.3);
   transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .time-box:hover {
   transform: translateY(-5px);
   border-color: #ffe523;
-  box-shadow: 0 5px 20px rgba(255, 229, 35, 0.3);
+  box-shadow: 0 5px 20px rgba(255, 229, 35, 0.4);
 }
 
 .time-box .number {
@@ -1876,17 +1869,36 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .countdown-wrapper {
+    bottom: 20px;
+  }
+  
   .time-box {
-    min-width: 80px;
-    padding: 15px 20px;
+    min-width: 70px;
+    padding: 12px 15px;
   }
   
   .time-box .number {
-    font-size: 36px;
+    font-size: 32px;
+  }
+  
+  .time-box .label {
+    font-size: 11px;
   }
   
   .countdown-timer {
     gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .time-box {
+    min-width: 60px;
+    padding: 10px 12px;
+  }
+  
+  .time-box .number {
+    font-size: 24px;
   }
 }
