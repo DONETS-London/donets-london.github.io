@@ -1668,3 +1668,147 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-top: 10px;
   }
 }
+
+/*--------------------------------------------------------------
+# Reading Progress Bar
+--------------------------------------------------------------*/
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #ffe523;
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.2s ease;
+}
+
+/*--------------------------------------------------------------
+# Section Divider (Gradient)
+--------------------------------------------------------------*/
+.section-divider {
+  height: 4px;
+  background: linear-gradient(90deg, #ffe523, #ff6b6b, #4ecdc4, #ffe523);
+  margin: 0;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Theme Cards Enhancement
+--------------------------------------------------------------*/
+.theme-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.theme-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.theme-card h3 {
+  margin-bottom: 15px;
+  color: #0e1b4d;
+  font-weight: 600;
+}
+
+.theme-card p {
+  color: #2f3138;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/*--------------------------------------------------------------
+# Floating Shapes
+--------------------------------------------------------------*/
+.floating-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+}
+
+.floating-shape.shape-1 {
+  width: 80px;
+  height: 80px;
+  background: #ffe523;
+  top: 10%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.floating-shape.shape-2 {
+  width: 60px;
+  height: 60px;
+  background: #4ecdc4;
+  top: 60%;
+  right: 15%;
+  animation: float 10s ease-in-out infinite 2s;
+}
+
+.floating-shape.shape-3 {
+  width: 100px;
+  height: 100px;
+  background: #ff6b6b;
+  bottom: 20%;
+  left: 20%;
+  animation: float 12s ease-in-out infinite 4s;
+}
+
+.floating-shape.shape-4 {
+  width: 70px;
+  height: 70px;
+  background: #ffe523;
+  top: 40%;
+  right: 25%;
+  animation: float 9s ease-in-out infinite 1s;
+}
+
+.floating-shape.shape-5 {
+  width: 90px;
+  height: 90px;
+  background: #4ecdc4;
+  bottom: 30%;
+  right: 10%;
+  animation: float 11s ease-in-out infinite 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-40px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-20px) translateX(5px);
+  }
+}
+
+/* Make sure sections with floating shapes have relative position */
+#about {
+  position: relative;
+}
+
+#about > .container {
+  position: relative;
+  z-index: 1;
+}
