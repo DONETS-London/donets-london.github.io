@@ -1820,7 +1820,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 .countdown-wrapper {
   position: absolute;
-  bottom: 70px;
+  bottom: 80px;
   left: 0;
   right: 0;
   z-index: 10;
