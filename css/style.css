@@ -1697,28 +1697,30 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Theme Cards Enhancement
 --------------------------------------------------------------*/
 .theme-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.1);
   padding: 30px 20px;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   height: 100%;
   margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .theme-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .theme-card h3 {
   margin-bottom: 15px;
-  color: #0e1b4d;
+  color: #ffe523;
   font-weight: 600;
 }
 
 .theme-card p {
-  color: #2f3138;
+  color: #fff;
   font-size: 14px;
   line-height: 1.8;
 }
