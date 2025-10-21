@@ -1814,3 +1814,79 @@ body.mobile-nav-active #mobile-nav-toggle {
   position: relative;
   z-index: 1;
 }
+
+/*--------------------------------------------------------------
+# Countdown Timer
+--------------------------------------------------------------*/
+.countdown-container {
+  text-align: center;
+  margin: 40px 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 229, 35, 0.3);
+}
+
+.countdown-container h3 {
+  color: #ffe523;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px 30px;
+  border-radius: 10px;
+  min-width: 120px;
+  border: 2px solid rgba(255, 229, 35, 0.3);
+  transition: all 0.3s ease;
+}
+
+.time-box:hover {
+  transform: translateY(-5px);
+  border-color: #ffe523;
+  box-shadow: 0 5px 20px rgba(255, 229, 35, 0.3);
+}
+
+.time-box .number {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffe523;
+  line-height: 1;
+  margin-bottom: 10px;
+  font-family: "Raleway", sans-serif;
+}
+
+.time-box .label {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .time-box {
+    min-width: 80px;
+    padding: 15px 20px;
+  }
+  
+  .time-box .number {
+    font-size: 36px;
+  }
+  
+  .countdown-timer {
+    gap: 10px;
+  }
+}
