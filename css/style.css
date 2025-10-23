@@ -493,7 +493,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  padding: 0 15px;
+  padding: 0 15px 200px 15px;
 }
 
 #intro h1 {
