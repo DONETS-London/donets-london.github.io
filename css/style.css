@@ -1820,10 +1820,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------------------------------------*/
 .countdown-wrapper {
   position: absolute;
-  bottom: 80px;
+  bottom: 50px;
   left: 0;
   right: 0;
   z-index: 10;
+  padding: 0 15px;
 }
 
 .countdown-timer {
@@ -1868,15 +1869,96 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 500;
 }
 
-/* Responsive */
-@media (max-width: 991px) {
+/* (1920px+) */
+@media (min-width: 1920px) {
   .countdown-wrapper {
-    bottom: 20px;
+    bottom: 80px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 250px 15px;
+  }
+}
+
+/* (1366px - 1919px) */
+@media (max-width: 1919px) and (min-width: 1367px) {
+  .countdown-wrapper {
+    bottom: 60px;
+  }
+}
+
+/* (1200px - 1366px) */
+@media (max-width: 1366px) and (min-width: 1200px) {
+  .countdown-wrapper {
+    bottom: 50px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 180px 15px;
+  }
+}
+
+/* (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .countdown-wrapper {
+    bottom: 40px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 170px 15px;
   }
   
   .time-box {
-    min-width: 70px;
-    padding: 12px 15px;
+    min-width: 100px;
+    padding: 18px 25px;
+  }
+  
+  .time-box .number {
+    font-size: 42px;
+  }
+}
+
+/* (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .countdown-wrapper {
+    bottom: 30px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 150px 15px;
+  }
+  
+  .time-box {
+    min-width: 85px;
+    padding: 15px 20px;
+  }
+  
+  .time-box .number {
+    font-size: 36px;
+  }
+  
+  .time-box .label {
+    font-size: 12px;
+  }
+  
+  .countdown-timer {
+    gap: 15px;
+  }
+}
+
+/* (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .countdown-wrapper {
+    bottom: 25px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 140px 15px;
+  }
+  
+  .time-box {
+    min-width: 75px;
+    padding: 12px 18px;
   }
   
   .time-box .number {
@@ -1888,17 +1970,115 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
   
   .countdown-timer {
+    gap: 12px;
+  }
+}
+
+/* (480px - 575px) */
+@media (max-width: 575px) and (min-width: 480px) {
+  .countdown-wrapper {
+    bottom: 20px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 130px 15px;
+  }
+  
+  .time-box {
+    min-width: 70px;
+    padding: 10px 15px;
+  }
+  
+  .time-box .number {
+    font-size: 28px;
+  }
+  
+  .time-box .label {
+    font-size: 10px;
+  }
+  
+  .countdown-timer {
     gap: 10px;
   }
 }
 
-@media (max-width: 480px) {
+/* (max 479px) */
+@media (max-width: 479px) {
+  .countdown-wrapper {
+    bottom: 15px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 120px 15px;
+  }
+  
   .time-box {
     min-width: 60px;
-    padding: 10px 12px;
+    padding: 8px 12px;
   }
   
   .time-box .number {
     font-size: 24px;
+  }
+  
+  .time-box .label {
+    font-size: 9px;
+  }
+  
+  .countdown-timer {
+    gap: 8px;
+  }
+}
+
+/* (height < 600px) */
+@media (max-height: 600px) {
+  .countdown-wrapper {
+    bottom: 10px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 110px 15px;
+  }
+  
+  .time-box {
+    padding: 6px 10px;
+    min-width: 55px;
+  }
+  
+  .time-box .number {
+    font-size: 20px;
+  }
+  
+  .time-box .label {
+    font-size: 8px;
+  }
+}
+
+/* (height < 500px) */
+@media (max-height: 500px) {
+  .countdown-wrapper {
+    bottom: 5px;
+  }
+  
+  #intro .intro-container {
+    padding: 0 15px 100px 15px;
+  }
+  
+  .time-box {
+    padding: 5px 8px;
+    min-width: 50px;
+  }
+  
+  .time-box .number {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .time-box .label {
+    font-size: 8px;
+  }
+  
+  .countdown-timer {
+    gap: 6px;
   }
 }
